@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="WeatherWebappStyle.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="leftBlock">
+        <div class="theAshhar"><h3 id="theAshhar">theAshhar.weather</h3>
+        <span id="powered" > Powered by <a href="https://www.weatherapi.com/" title="Weather API"> WeatherAPI.com  </a></span>
+    </div>
+        <div class="degreeDiv">
+            <h1 id="degree"></h1>
+            <div class="locationDate">
+                <h2 id="weatherLocation"></h2>
+                <div class="date">
+                    <p id="date"></p>
+                    <p id="region"> West Bengal</p>                    
+                </div>
+            </div>
+            <div class="weatherMain">
+                <img id="weatherIcon" src="Resourses/cloud-rain-icon.svg"  alt="icon">
+                <p id="conditionText">Rainy</p>
+            </div>
+        </div>
+    </div>
+    <div class="rightBlock">
+        <button class="searchBtn" onclick="getWeatherData()"><img src="Resourses/search-icon.svg" ></button>
+
+        <div class="locationSearch">
+            <input id="searchCity" placeholder="Search City" value="" type="text" onkeydown="if(event.key === 13 || event.key === 'Enter') {getWeatherData();}"> 
+            <hr class="line">            
+        </div>
+        <div class="weatherDetails">
+            <hr class="line2">
+            <h3>Details</h3>
+            <div class="weatherDetailsDiv">
+                <div class="detailsInsideLeft">  
+                    <p>Humidity</p>
+                    <p>Wind Speed</p>
+                    <p>Wind Direction</p>
+                    <p>Pressure</p2>
+                </div>
+                <div class="detailsInsideRight">  
+                    <p id="humidity"></p>
+                    <p id="windSpeed"></p>
+                    <p id="windDir"></p2>
+                    <p id="pressure"></p2>
+                </div>
+            </div>
+        </div>
+        <hr class="line3">
+
+    </div>
+    <!-- <span>Powered by <a href="https://www.weatherapi.com/" title="Weather API"> WeatherAPI.com</a></span> -->
+    <script src="/CWH_course/WeatherApp/WeatherWebapp.js"></script>
+</body>
+</html>
