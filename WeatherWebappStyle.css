@@ -27,7 +27,7 @@ p {
     margin: 0;
 }
 body {
-    background-image: url("/CWH_course/WeatherApp/Resourses/rainImage2.png");
+    background-image: url("Resourses/rainImage2.png");
     background-size: cover;
     width: 100%;
     height: 100%;

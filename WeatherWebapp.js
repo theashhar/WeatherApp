@@ -19,26 +19,18 @@ window.onload = function () {
 	getWeatherData()
 }
 const searchCity = async () => {
-	try {
-		if (searchCityElement.value == '')
-		{
-			var searchCityValue = 'kolkata'
-		}
-		else
-		{
-			searchCityValue = searchCityElement.value
-		}
-		const response = await fetch(`${base_Url}${searchCityValue}`);
-		console.log(response)
-		const result = await response.json();
-		return result
-	
-	} catch (error) {
-		console.error(error);
-		let errorMark = `?`
-		console.error(errorMark);
-		return errorMark
-		}}
+    try {
+        let searchCityValue = searchCityElement.value.trim() === '' ? 'kolkata' : searchCityElement.value;
+        
+        const response = await fetch(`${base_Url}${searchCityValue}`);
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.error("Error fetching weather data:", error);
+        return null;
+    }
+}
+
 
 const getWeatherData = async () => {
 	degree = await searchCity()
